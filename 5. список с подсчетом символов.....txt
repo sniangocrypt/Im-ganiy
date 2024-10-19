@@ -1,0 +1,16 @@
+
+with open("venv\input.txt", "r", encoding="utf-8") as file:
+    data = file.readlines()  # Читаем содержимое файла
+
+a = data
+
+def count_dict (a):
+    for line in a:
+        word_count = 0
+        words = line.split()
+        for word in words:
+            if len(word) > 1:
+                word_count += 1
+        print(f"В строкe  {a.index(line)}  {word_count} слов")
+
+count_dict(a)
